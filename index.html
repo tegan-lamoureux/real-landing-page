@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Search engines -->
+  <title>Tegan Lamoureux · Oslo, Norway</title>
+  <meta name="description" content="The online landing page of Tegan Lamoureux, based in Oslo, Norway. Links to LinkedIn, GitHub and a personal website, plus a contact form.">
+  <meta name="author" content="Tegan Lamoureux">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lamoureux.no/">
+
+  <!-- Link previews (LinkedIn, Slack, iMessage, etc.) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Tegan Lamoureux">
+  <meta property="og:title" content="Tegan Lamoureux · Oslo, Norway">
+  <meta property="og:description" content="The online landing page of Tegan Lamoureux, based in Oslo, Norway.">
+  <meta property="og:url" content="https://lamoureux.no/">
+  <meta property="profile:first_name" content="Tegan">
+  <meta property="profile:last_name" content="Lamoureux">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Structured data: tells Google this page is about a person, where they are, and which profiles are theirs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tegan Lamoureux",
+    "givenName": "Tegan",
+    "familyName": "Lamoureux",
+    "url": "https://lamoureux.no/",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Oslo, Norway",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oslo",
+        "addressCountry": "NO"
+      }
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/teganl/",
+      "https://github.com/tegan-lamoureux",
+      "https://teeg.no"
+    ]
+  }
+  </script>
+
+  <link rel="pgpkey" href="tegan_at_lamoureux_no.asc" type="application/pgp-keys">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#f6f1e7">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=EB+Garamond:wght@400;500&display=swap">
+
+  <style>
+    :root {
+      --bg: #f6f1e7;
+      --ink: #141414;
+      --field: #fbf8f2;
+      --line: #cfc6b4;
+      --muted: #938b7e;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+      font-size: 1.1875rem;
+      line-height: 1.6;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Auto margins centre the content vertically when it fits the screen */
+    main {
+      width: 100%;
+      max-width: 34rem;
+      margin: auto;
+      padding: 2.5rem 1rem 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(2.5rem, 9vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+    }
+
+    .location,
+    h2,
+    label,
+    button {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .location { margin: 0.5rem 0 2rem; }
+
+    p { margin: 0 0 1.2em; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+    a:hover { text-decoration-thickness: 2px; }
+
+    /* Contact form */
+    .contact { margin-top: 3rem; }
+
+    h2 {
+      margin: 0 0 1.25rem;
+      font-weight: 500;
+    }
+
+    form { text-align: left; }
+
+    label {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      margin: 0 0 1rem;
+      padding: 0.55rem 0.7rem;
+      font: inherit;
+      font-size: 1.05rem;
+      color: var(--ink);
+      background: var(--field);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+    }
+    textarea { min-height: 6.5rem; resize: vertical; }
+
+    input:focus,
+    textarea:focus {
+      outline: 1px solid var(--ink);
+      border-color: var(--ink);
+    }
+
+    .hp { display: none; }
+
+    button {
+      display: block;
+      margin: 0.25rem auto 0;
+      padding: 0.7rem 1.8rem;
+      font-family: inherit;
+      color: var(--bg);
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    button:hover,
+    button:focus-visible { color: var(--ink); background: transparent; }
+    button:disabled { opacity: 0.5; cursor: default; }
+
+    .status {
+      min-height: 1.6em;
+      margin: 0.6rem 0 0;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    footer {
+      padding: 1rem 1rem 1.25rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Shorter screens (e.g. 13" laptops): tighten so it still fits without scrolling */
+    @media (max-height: 880px) {
+      main { padding-top: 1.25rem; }
+      .location { margin-bottom: 1.5rem; }
+      .contact { margin-top: 2rem; }
+      textarea { min-height: 4.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tegan Lamoureux</h1>
+    <p class="location">Oslo, Norway</p>
+
+    <p>
+      This is my online landing page. For professional contact, see my
+      <a href="https://www.linkedin.com/in/teganl/" rel="me">LinkedIn</a> and
+      <a href="https://github.com/tegan-lamoureux" rel="me">GitHub</a>.
+    </p>
+    <p>
+      For my personal (non-professional) website:
+      <a href="https://teeg.no" rel="me">teeg.no</a>.
+    </p>
+    <p>
+      PGP key:
+      <a href="tegan_at_lamoureux_no.asc" type="application/pgp-keys" title="Fingerprint: B44A B36D 1E55 0472 AF2F D897 1A58 2EA0 7D58 900D">1A58 2EA0 7D58 900D</a>
+    </p>
+
+    <section class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+
+      <form id="contact-form" action="https://formspree.io/f/mdegnjpv" method="POST">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <!-- Spam honeypot: hidden from people, bots fill it in -->
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="New message from your landing page">
+
+        <button type="submit">Send</button>
+        <p class="status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> Tegan Lamoureux &middot;
+    <a href="https://github.com/tegan-lamoureux/real-landing-page">Source</a>
+  </footer>
+
+  <script>
+    (function () {
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Send the form in the background so visitors stay on the page.
+      // Without JavaScript it still works as a normal form post.
+      var form = document.getElementById("contact-form");
+      var statusEl = document.getElementById("form-status");
+      var button = form.querySelector("button");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        button.disabled = true;
+        statusEl.textContent = "Sending…";
+
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        })
+          .then(function (response) {
+            if (!response.ok) throw new Error(response.status);
+            form.reset();
+            statusEl.textContent = "Thank you. Your message has been sent.";
+          })
+          .catch(function () {
+            statusEl.textContent = "Sorry, something went wrong. Please try again, or reach me on LinkedIn.";
+          })
+          .finally(function () {
+            button.disabled = false;
+          });
+      });
+    })();
+  </script>
+</body>
+</html>
